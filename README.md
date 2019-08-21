@@ -1,0 +1,3 @@
+### newsify
+
+App to generate newsfeed for different section via api...

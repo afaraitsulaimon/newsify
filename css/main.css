@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+
+
+body{
+    background-color:gainsboro;
+}
+
+header{
+	padding: 12px 20px;
+	background-color: #fff;
+	box-shadow: 0 2px 4px #888;
+
+}
+
+.brand{
+	padding: 0px;
+    font-family: 'Vibur', cursive, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.1em;
+
+}
+
+
+.menus{
+    float:right;
+}
+
+.menu, a:hover{
+    border-bottom: 2px solid #f08b18;
+    margin-top: 3px;
+    }
+
+a{ 	padding: 0px 23px;
+	text-decoration : none;
+	font-family: 'Abel', sans-serif;
+	opacity: .95;
+}
+
+.fa, .fas{
+    padding-right: 5px;
+}
+
+.fa-blog{
+    font-size: 1.5em;
+}
+
+
+.newsflash{
+    background-color: #f4f4f4;
+    margin-top:3px;
+    box-shadow: 0 2px 4px #888;
+}
+
+marquee{
+    overflow: hidden;
+    
+    margin-left: 7.9%;
+}
+
+.flash{
+    background-color: #f08b18;
+    float: left;
+    position: absolute;
+    padding: 2px;
+    margin-right: 4px;
+}
+
+
+
+
+.news-Section, .sport-section{
+    margin: 20px 2%;
+    width:100%;
+    clear: both;
+}
+
+.card{
+    width: 20%;
+    margin-right: 2%;
+    margin-left: 2%;
+    background-color:#fff; 
+    display: inline-block;
+    box-shadow: 2px 4px 3px grey;
+    border-radius: 0px 0px 5px 5px;
+    margin-bottom: 25px;
+    margin-top: 15px;
+    overflow: hidden;
+    
+    
+    
+}
+
+
+.card-header{
+    background-color: #3a7bd5;
+    width: 100%;
+}
+
+.card-header, p {
+    padding: 10px 5px;
+    text-decoration: black;
+}
+
+.card-image {
+width: 100%;
+
+}
+
+img {
+    width: 100%;
+    height: 180px;
+    
+    }
+
+img:hover{
+    filter: contrast(50%);
+    }
+   
+.card-content {
+    padding: 10px 5px;
+    margin-bottom: 10px;
+   
+}
+
+
+
+.news-title{
+    word-wrap: none;
+}
+
+hr{
+    clear:both;
+}
+
+footer{
+    border-top: 2px solid #fff;
+    margin-top: 20px;
+    padding: 12px 0;
+    text-align: center;
+}
+
+footer p{
+    color: #4c4c4c;
+    line-height: 1.5em;
+    clear: both;
+}
+
+

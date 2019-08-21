@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script > 
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <style>
+    body{
+        background: #f4f4f4;
+    }
+
+    .accordion{
+        background: gainsboro;
+        width: 75%;
+        margin:2%;
+        height: auto;
+        padding: 20px 0px;
+
+    }
+
+    .holder1{
+       
+        margin-bottom: 15px;
+        margin-left: 20px;
+        width: 70%;
+        box-shadow: 2px 4px 3px grey;
+        
+    }
+
+    .holder1 .top{
+        border-radius: 12px 0px 0px 0px;
+        background: #fff;
+        padding: 12px;
+        box-shadow: 0 2px 4px grey;
+        
+    }
+
+    .top::after{
+        content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+    
+    }
+
+   
+    .holder1 .content{
+        background: gainsboro;
+        padding: 12px;
+        display: none;
+        
+        
+    }
+
+    .tab-links li{
+        float: left;
+        padding: 12px;
+        list-style: none;
+        background: gray;
+        margin-right:5px; 
+        border-radius: 5px 5px 0px 0px;
+    }
+
+    .tabs{
+        clear: both;
+        width: 60%;
+        margin-left: 30px;
+    }
+
+    .tabs .tab-content{
+        margin-bottom: 20px;
+        background: white;
+        padding: 12px;
+        display: none;
+    }
+    </style>
+    
+</head>
+<body>
+    
+    <div class="accordion">
+        <div class="holder1">
+            <div class="top">carousel  1 </div>
+            <div class="content"> <b>Course content 1</b>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia corporis recusandae nostrum sed reprehenderit veniam veritatis dolor, labore iusto laboriosam tempora adipisci. Quia consequatur voluptas eos nihil in, minima distinctio.</div>
+        </div>
+        <div class="holder1">
+            <div class="top">Carousel  2</div>
+            <div class="content">
+                    <b>Course content 2</b>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia corporis recusandae nostrum sed reprehenderit veniam veritatis dolor, labore iusto laboriosam tempora adipisci. Quia consequatur voluptas eos nihil in, minima distinctio.
+            </div>
+        </div>
+        <div class="holder1">
+            <div class="top"> Carousel 3 </div>
+            <div class="content">
+                    <b>Course content 3</b>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia corporis recusandae nostrum sed reprehenderit veniam veritatis dolor, labore iusto laboriosam tempora adipisci. Quia consequatur voluptas eos nihil in, minima distinctio.
+            </div>
+        </div>
+    </div>
+<hr>
+    <ul class="tab-links">
+        <li><a href="#tab1">Tab1</a></li>
+        <li><a href="#tab2">Tab2</a></li>
+        <li><a href="#tab3">Tab3</a></li>
+    </ul>
+
+    <div class="tabs">
+        
+            
+            <div class="tab-content" id="tab1"> 
+                <b>Course content 1</b>: Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel unde dicta voluptatem perferendis beatae aspernatur explicabo rerum amet esse iusto, mollitia corporis ea hic, vero suscipit voluptas architecto consectetur nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia corporis recusandae nostrum sed reprehenderit veniam veritatis dolor, labore iusto laboriosam tempora adipisci. Quia consequatur voluptas eos nihil in, minima distinctio.
+            </div>    
+
+            <div class="tab-content" id="tab2">
+                    <b>Course content 2</b>: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia ipsam nostrum impedit ducimus fugit libero enim, facere nulla quos a explicabo delectus quam aliquid, quo eum deleniti dignissimos distinctio? Nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia corporis recusandae nostrum sed reprehenderit veniam veritatis dolor, labore iusto laboriosam tempora adipisci. Quia consequatur voluptas eos nihil in, minima distinctio.
+            </div>
+                  
+            <div class="tab-content" id="tab3">
+                    <b>Course content 3</b>: Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit et nemo optio. Ipsum id doloremque possimus nulla nostrum distinctio nisi fuga vitae deserunt. Cum tempore accusantium asperiores officia recusandae omnis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia corporis recusandae nostrum sed reprehenderit veniam veritatis dolor, labore iusto laboriosam tempora adipisci. Quia consequatur voluptas eos nihil in, minima distinctio.
+        </div>
+    </div>
+
+
+    <script > 
+
+        $(document).ready(function(){
+            $('.holder1').on('click','.top',function(){
+                $(this).toggleClass('active').next().slideToggle('slow');
+            });
+        })
+    
+    </script>
+       
+</body>
+</html>
