@@ -78,7 +78,8 @@ function sportNews(){
                 $('.newsHeading').text(sport_title);
                 $('.card-image').click(function(){
                     alert('works');
-                    window.open('sport_url', '_blank', 'resizable=no', 'false');
+                   // window.open('sport_url', '_blank', 'resizable=no', 'false');
+                   $('.sport-section').load('${sport_url}');
                 })
 
             })
@@ -104,7 +105,7 @@ function SciNews(){
                 var edu_image = items.urlToImage;
                 var edu_url = items.url;
 
-                $('.edu-section').append(`
+                $('.science-section').append(`
                     <div class = "card">
                         <div class="card-header">
                             <p class = "news-title"> <b> ${edu_title}  </b> </p>
