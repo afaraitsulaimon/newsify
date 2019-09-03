@@ -9,8 +9,9 @@ function healthNews(){
             
                 console.log( i + '<br>' + item.title + '<br>' + item.content);
                 var news_title = item.title;
-                var news_content = item.content;
+                var news_content = item.description;
                 var news_image = item.urlToImage;
+                var news_url = item.url;
 
                 $('.news-Section').append(`
                     <div class = "card">
@@ -22,15 +23,16 @@ function healthNews(){
                         </div
                         <div class="card-content">
                             <p id="news-content"> ${news_content} </p>
+                            <button> <a href = "${news_url}" target="_blank"> Read More </a> </button>
                         </div>
                     </div>
                     
                 
                 `)
 
-                if (result.articles && i == 5) {
-                    return false;
-                }
+                // if (result.articles && i == 5) {
+                //     return false;
+                // }
                 
                 $('.newsHeading').text(news_title);
                 
@@ -53,7 +55,7 @@ function sportNews(){
             $.each(sport.articles, function(i, items){
                 
                 var sport_title = items.title;
-                var sport_content = items.content;
+                var sport_content = items.description;
                 var sport_image = items.urlToImage;
                 var sport_url = items.url;
 
@@ -67,21 +69,18 @@ function sportNews(){
                         </div
                         <div class="card-content">
                             <p id="news-content"> ${sport_content} </p>
+                            <button> <a href = "${sport_url}" target="_blank"> Read More </a> </button>
+
                         </div>
                     </div>
            
                 `)
 
-                if (sport.articles && i == 5) {
-                    return false;
-                }
+                // if (sport.articles && i == 5) {
+                //     return false;
+                // }
                 $('.newsHeading').text(sport_title);
-                $('.card-image').click(function(){
-                    alert('works');
-                   // window.open('sport_url', '_blank', 'resizable=no', 'false');
-                   $('.sport-section').load('${sport_url}');
-                })
-
+                
             })
         },
         error:function(){
@@ -101,7 +100,7 @@ function SciNews(){
             $.each(science.articles, function(i, items){
                 
                 var edu_title = items.title;
-                var edu_content = items.content;
+                var edu_content = items.description;
                 var edu_image = items.urlToImage;
                 var edu_url = items.url;
 
@@ -115,22 +114,61 @@ function SciNews(){
                         </div
                         <div class="card-content">
                             <p id="news-content"> ${edu_content} </p>
+                            <button> <a href = "${edu_url}" target="_blank"> Read from source </a> </button>
+
                         </div>
                     </div>
                 
                 `)
 
-                if (edu.articles && i == 5) {
-                    return false;
-                }
+                // if (edu.articles && i == 5) {
+                //     return false;
+                // }
                 $('.newsHeading').text(edu_title);
-                $('.card-image').click(function(e){
-                    alert('works');
-                    e.preventDefault();
-                    const url = edu_url;
-                    window.open(url,'_blank', 'resizable', 'false');
-                })
+                
+            })
+        },
+        error:function(){
+            alert('error loading science and tech news via api');
+        }
+        
+    })
+    }
 
+
+function education(){
+        return $.ajax({
+            url:'https://newsapi.org/v2/top-headlines?country=ng&category=entertainment&apiKey=06008e50d7cf47e68f9c9d084b9ed5e0',
+            datatype:'jsonp',
+            success:function(education){
+            
+            $.each(education.articles, function(i, items){
+                
+                var edu_title = items.title;
+                var edu_content = items.description;
+                var edu_image = items.urlToImage;
+                var edu_url = items.url;
+
+                $('.education-section').append(`
+                    <div class = "card">
+                        <div class="card-header">
+                            <p class = "news-title"> <b> ${edu_title}  </b> </p>
+                        </div>
+                        <div class = "card-image">
+                        <img src = "${edu_image}">
+                        </div
+                        <div class="card-content">
+                            <p id="news-content"> ${edu_content} </p>
+                            <button> <a href = "${edu_url}" target="_blank"> Read from source </a> </button>
+
+                        </div>
+                    </div>
+                
+                `)
+
+                
+                $('.newsHeading').text(edu_title);
+                
             })
         },
         error:function(){
@@ -145,6 +183,7 @@ $(document).ready(function(){
     healthNews()
     sportNews()
     SciNews()  
+    education()
                
 });
 
