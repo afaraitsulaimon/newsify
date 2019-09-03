@@ -125,6 +125,7 @@ img:hover{
 .card-content {
     padding: 10px 5px;
     margin-bottom: 10px;
+    font-family: 'Inconsolata', monospace;
    
 }
 
@@ -152,3 +153,13 @@ footer p{
 }
 
 
+button{
+    padding: 8px 15px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    background: transparent;
+}
+
+button a{
+    border-bottom-color: none;
+}
