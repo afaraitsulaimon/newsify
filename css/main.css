@@ -72,10 +72,10 @@ marquee{
     margin-right: 4px;
 }
 
-.news-Section, .sport-section, .science-section{
+.news-Section, .sport-section, .science-section, .education-section{
     display: grid;
     grid-template-columns: repeat(4, 20%);
-    grid-column-gap: 4%;
+    grid-column-gap: 5%;
     margin: 20px 2%;
 }
 
@@ -169,4 +169,35 @@ button a{
     border-bottom-color: none;
 }
 
+
+@media only screen and (max-width: 720px){
+    .news-Section, .sport-section, .science-section, .education-section{
+     grid-template-columns: 1fr 1fr;
+    } 
+    .item-1 {
+     grid-column: 1 / 3;
+     grid-row: 2 / 3;
+    } 
+    .item-2 {
+     grid-row: 1 / 1;
+    }
+  }
+
+
+  /* ======================= Nexus 5 ====================== */
+
+  @media only screen 
+and (min-width: 360px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 3.0) {
+    .news-Section, .sport-section, .science-section, .education-section{
+        grid-template-columns: 90%;
+        margin-left: 20px;
+       } 
+
+       .newsflash{
+           display: none
+       }
+       
+}
 
