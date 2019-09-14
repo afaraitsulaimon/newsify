@@ -23,7 +23,22 @@ function healthNews(){
                         </div
                         <div class="card-content">
                             <p id="news-content"> ${news_content} </p>
-                            <button> <a href = "${news_url}" target="_blank"> Read More </a> </button>
+                            <div class="share">
+                                <div class="read">
+                                    <button> <a href="${news_url}" target="_blank"> Read More </a> </button>
+                                </div>
+                                <div class="social-share">
+                                    <!-- <i class="fa fa-share-alt fa-1x"></i> -->
+                                    <div class="socials">
+                                            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+                                            data-text="News Update: ${news_content} " data-url="${news_url}" data-hashtags="Newsifyapp"
+                                            data-show-count="false">Tweet</a>
+                                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                        <a class="btn" href="https://wa.me/?text=${news_content} + '' + ${news_url}  +  shared from Newsifyapp.netlify.com "
+                                            target="_blank"> <i class="fab fa-whatsapp" aria-hidden="true"></i> Share </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
@@ -69,11 +84,24 @@ function sportNews(){
                         </div
                         <div class="card-content">
                             <p id="news-content"> ${sport_content} </p>
-                            <button> <a href = "${sport_url}" target="_blank"> Read More </a> </button>
-
+                            <div class="share">
+                                <div class="read">
+                                    <button> <a href="${sport_url}" target="_blank"> Read More </a> </button>
+                                </div>
+                                <div class="social-share">
+                                    <!-- <i class="fa fa-share-alt fa-1x"></i> -->
+                                    <div class="socials">
+                                            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+                                            data-text="News Update: ${sport_content} " data-url="${sport_url}" data-hashtags="Newsifyapp"
+                                            data-show-count="false">Tweet</a>
+                                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                        <a class="btn" href="https://wa.me/?text=${sport_content} + '' + ${sport_url}  +  shared from Newsifyapp.netlify.com "
+                                            target="_blank"> <i class="fab fa-whatsapp" aria-hidden="true"></i> Share </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-           
                 `)
 
                 // if (sport.articles && i == 5) {
@@ -99,23 +127,37 @@ function SciNews(){
             
             $.each(science.articles, function(i, items){
                 
-                var edu_title = items.title;
-                var edu_content = items.description;
-                var edu_image = items.urlToImage;
-                var edu_url = items.url;
+                var sci_title = items.title;
+                var sci_content = items.description;
+                var sci_image = items.urlToImage;
+                var sci_url = items.url;
 
                 $('.science-section').append(`
                     <div class = "card">
                         <div class="card-header">
-                            <p class = "news-title"> <b> ${edu_title}  </b> </p>
+                            <p class = "news-title"> <b> ${sci_title}  </b> </p>
                         </div>
                         <div class = "card-image">
-                        <img src = "${edu_image}">
+                        <img src = "${sci_image}">
                         </div
                         <div class="card-content">
-                            <p id="news-content"> ${edu_content} </p>
-                            <button> <a href = "${edu_url}" target="_blank"> Read from source </a> </button>
-
+                            <p id="news-content"> ${sci_content} </p>
+                            <div class="share">
+                                <div class="read">
+                                    <button> <a href="${sci_url}" target="_blank"> Read More </a> </button>
+                                </div>
+                                <div class="social-share">
+                                    <!-- <i class="fa fa-share-alt fa-1x"></i> -->
+                                    <div class="socials">
+                                            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+                                            data-text="News Update: ${sci_content} " data-url="${sci_url}" data-hashtags="Newsifyapp"
+                                            data-show-count="false">Tweet</a>
+                                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                        <a class="btn" href="https://wa.me/?text=${sci_content} + '' + ${sci_url}  +  shared from Newsifyapp.netlify.com "
+                                            target="_blank"> <i class="fab fa-whatsapp" aria-hidden="true"></i> Share </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 
@@ -159,8 +201,22 @@ function education(){
                         </div
                         <div class="card-content">
                             <p id="news-content"> ${edu_content} </p>
-                            <button> <a href = "${edu_url}" target="_blank"> Read from source </a> </button>
-
+                            <div class="share">
+                                <div class="read">
+                                    <button> <a href="${edu_url}" target="_blank"> Read More </a> </button>
+                                </div>
+                                <div class="social-share">
+                                    <!-- <i class="fa fa-share-alt fa-1x"></i> -->
+                                    <div class="socials">
+                                            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+                                            data-text="News Update: ${edu_content} " data-url="${edu_url}" data-hashtags="Newsifyapp"
+                                            data-show-count="false">Tweet</a>
+                                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                        <a class="btn" href="https://wa.me/?text=${edu_content} + '' + ${edu_url}  +  shared from Newsifyapp.netlify.com "
+                                            target="_blank"> <i class="fab fa-whatsapp" aria-hidden="true"></i> Share </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 
@@ -172,7 +228,7 @@ function education(){
             })
         },
         error:function(){
-            alert('error loading science and tech news via api');
+            alert('error loading education news via api');
         }
         
     })
@@ -184,6 +240,7 @@ $(document).ready(function(){
     sportNews()
     SciNews()  
     education()
+    
                
 });
 
