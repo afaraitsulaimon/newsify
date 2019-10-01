@@ -83,14 +83,14 @@ marquee{
 
 .news-Section, .sport-section, .science-section, .education-section{
     display: grid;
-    grid-template-columns: repeat(4, 23%);
-    grid-column-gap: 2%;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-column-gap: 20px;
     margin: 20px 2%;
 }
 
 .news-Section, .sport-section{
     
-    width:100%;
+    
     clear: both;
 }
 
@@ -129,14 +129,16 @@ width: 100%;
 img {
     width: 100%;
     height: 180px;
-    filter: contrast(50%);
+    
     transition: width cubic-bezier(0.175, 0.885, 0.32, 1.275) ease, height cubic-bezier(.2, .6, .19, .71) ease-in-out;
+    transition: transform 1s;
     }
 
 img:hover{
     width: 105%;
     height: 190px;
-    filter: none;
+    transform: translateY(-10px);
+    filter: contrast(50%);
     
     }
    
@@ -221,9 +223,9 @@ button a{
 }
 
 
-
+/* 
     /* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 800px) {
+/* @media only screen and (max-width : 800px) {
     .news-Section, .sport-section, .science-section, .education-section{
         grid-template-columns: repeat(2, 45%);
         margin-left: 15px;
@@ -248,11 +250,11 @@ button a{
         display: block;
     }
        
-    }
+    } */
 
 
     /* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 412px) {
+/* @media only screen and (max-width : 412px) {
     .news-Section, .sport-section, .science-section, .education-section{
         grid-template-columns: 90%;
         margin-left: 15px;
@@ -263,7 +265,7 @@ button a{
            display: none
        }
     }
-  
+   */
   /* ======================= Nexus 5 ====================== */
 
   /* @media only screen 
@@ -278,6 +280,6 @@ and (-webkit-min-device-pixel-ratio: 3.0) {
        .newsflash{
            display: none
        }
-        */
+        */ 
 
 
