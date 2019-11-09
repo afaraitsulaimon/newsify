@@ -30,12 +30,13 @@ function healthNews(){
                                 <div class="social-share">
                                     <!-- <i class="fa fa-share-alt fa-1x"></i> -->
                                     <div class="socials">
+                                    <a class="was" href="https://wa.me/?text=${news_content} + '' + ${news_url}  +  shared from Newsifyapp.netlify.com "
+                                    target="_blank"> <i class="fab fa-whatsapp" aria-hidden="true"></i> Share </a>
+
                                             <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
                                             data-text="News Update: ${news_content} " data-url="${news_url}" data-hashtags="Newsifyapp"
                                             data-show-count="false">Tweet</a>
                                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                                        <a class="btn" href="https://wa.me/?text=${news_content} + '' + ${news_url}  +  shared from Newsifyapp.netlify.com "
-                                            target="_blank"> <i class="fab fa-whatsapp" aria-hidden="true"></i> Share </a>
                                     </div>
                                 </div>
                             </div>
@@ -57,6 +58,8 @@ function healthNews(){
         },
         error:function(){
             alert('error loading health news via api');
+           
+            
         }
     });
     }
@@ -95,7 +98,7 @@ function sportNews(){
                                             data-text="News Update: ${sport_content} " data-url="${sport_url}" data-hashtags="Newsifyapp"
                                             data-show-count="false">Tweet</a>
                                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                                        <a class="btn" href="https://wa.me/?text=${sport_content} + '' + ${sport_url}  +  shared from Newsifyapp.netlify.com "
+                                        <a class="was" href="https://wa.me/?text=${sport_content} + '' + ${sport_url}  +  shared from Newsifyapp.netlify.com "
                                             target="_blank"> <i class="fab fa-whatsapp" aria-hidden="true"></i> Share </a>
                                     </div>
                                 </div>
@@ -153,7 +156,7 @@ function SciNews(){
                                             data-text="News Update: ${sci_content} " data-url="${sci_url}" data-hashtags="Newsifyapp"
                                             data-show-count="false">Tweet</a>
                                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                                        <a class="btn" href="https://wa.me/?text=${sci_content} + '' + ${sci_url}  +  shared from Newsifyapp.netlify.com "
+                                        <a class="was" href="https://wa.me/?text=${sci_content} + '' + ${sci_url}  +  shared from Newsifyapp.netlify.com "
                                             target="_blank"> <i class="fab fa-whatsapp" aria-hidden="true"></i> Share </a>
                                     </div>
                                 </div>
@@ -166,7 +169,7 @@ function SciNews(){
                 // if (edu.articles && i == 5) {
                 //     return false;
                 // }
-                $('.newsHeading').text(edu_title);
+               
                 
             })
         },
@@ -212,7 +215,7 @@ function education(){
                                             data-text="News Update: ${edu_content} " data-url="${edu_url}" data-hashtags="Newsifyapp"
                                             data-show-count="false">Tweet</a>
                                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                                        <a class="btn" href="https://wa.me/?text=${edu_content} + '' + ${edu_url}  +  shared from Newsifyapp.netlify.com "
+                                        <a class="was" href="https://wa.me/?text=${edu_content} + '' + ${edu_url}  +  shared from Newsifyapp.netlify.com "
                                             target="_blank"> <i class="fab fa-whatsapp" aria-hidden="true"></i> Share </a>
                                     </div>
                                 </div>
@@ -235,6 +238,7 @@ function education(){
     }
 
 $(document).ready(function(){
+    
     
     healthNews()
     sportNews()

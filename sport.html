@@ -7,6 +7,17 @@
     <title>Newsify | Sport </title>
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        
+    
+
+
     <!-- font awesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/solid.css" integrity="sha384-r/k8YTFqmlOaqRkZuSiE9trsrDXkh07mRaoGBMoDcmA58OHILZPsk29i2BsFng1B" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/regular.css" integrity="sha384-IG162Tfx2WTn//TRUi9ahZHsz47lNKzYOp0b6Vv8qltVlPkub2yj9TVwzNck6GEF" crossorigin="anonymous">
@@ -20,31 +31,37 @@
     
     <script src="js/main.js"></script>
 </head>
-<body>
-        <header>
+<body class="holder">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><i class="fa fa-blog" aria-hidden="true"></i></a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
             
-                <span class="brand" href="index.html">
-                    <a href="index.html"><i class="fa fa-blog" aria-hidden="true"></i> </a>    </span>
-                
-                <div class="menus">
-                    <a href="#"><i class="fa fa-running" aria-hidden="true"></i>Sport</a>
-                    <a href="health.html"><i class="fas fa-hospital" aria-hidden="true"></i>Health</a></a>
-                    <a href="entertainment.html"><i class="fas fa-award" aria-hidden="true"></i>Education</a>
-                    <a href="sci_tech.html"><i class="fas fa-satellite" aria-hidden="true"></i>Science</a>
-                </div>
-                
-        </header>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><i class="fa fa-running" aria-hidden="true"></i>Sport</a></li>
+                <li><a href="health.html"><i class="fas fa-hospital" aria-hidden="true"></i>Health</a></li>
+                <li><a href="entertainment.html"><i class="fas fa-award" aria-hidden="true"></i>Entertainment</a>
+                </li>
+                <li><a href="sci_tech.html"><i class="fas fa-satellite" aria-hidden="true"></i>Science</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-        <div class="newsflash">
-                <span class="flash"> NEWS FLASH : </span>
-                <span><marquee behavior="scroll"  direction="left"><h3 class="newsHeading"> news flash scolls via this place</h3></marquee></span>
-             </div>
+        
      
              <div class="sport-section">
      
              </div>
      
-             <footer>
+             <footer class="page-footer">
                      <p>Developed and maintained with ❤ by BeardedPrince </p>
              </footer>
 
