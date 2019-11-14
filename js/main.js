@@ -14,7 +14,7 @@ function healthNews(){
                 var news_url = item.url;
 
                 $('.news-Section').append(`
-                    <div class = "card">
+                    <div class = "card" data-aos="fade-down">
                         <div class="card-header">
                             <p class = "news-title"> <b> ${news_title}  </b> </p>
                         </div>
@@ -57,8 +57,14 @@ function healthNews(){
             
         },
         error:function(){
-            alert('error loading health news via api');
-           
+           // alert('error loading health news via api');
+           $('.news-Section').append(`
+           <div class="alert alert-danger" data-aos = "fade-down">
+           <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Error!</strong> Failed to get health news feed for user
+</div>
+
+           `)
             
         }
     });
@@ -78,7 +84,7 @@ function sportNews(){
                 var sport_url = items.url;
 
                 $('.sport-section').append(`
-                    <div class = "card">
+                    <div class = "card" data-aos="fade-down">
                         <div class="card-header">
                             <p class = "news-title"> <b> ${sport_title}  </b> </p>
                         </div>
@@ -115,8 +121,14 @@ function sportNews(){
             })
         },
         error:function(){
-            console.log('Error loading feeds via api');
-            alert('Error loading feeds via api');
+            $('.sport-section').append(`
+           <div class="alert alert-danger" data-aos = "fade-down">
+           <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Error!</strong> Failed to get sport news feed for user
+</div>
+
+           `)
+            
         }
         
     })
@@ -136,7 +148,7 @@ function SciNews(){
                 var sci_url = items.url;
 
                 $('.science-section').append(`
-                    <div class = "card">
+                    <div class = "card" data-aos="fade-down">
                         <div class="card-header">
                             <p class = "news-title"> <b> ${sci_title}  </b> </p>
                         </div>
@@ -174,8 +186,14 @@ function SciNews(){
             })
         },
         error:function(){
-            alert('error loading science and tech news via api');
-        }
+            $('.science-section').append(`
+            <div class="alert alert-danger" data-aos = "fade-down">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+   <strong>Error!</strong> Failed to get Science & Tech news feed for user
+ </div>
+ 
+            `)
+                     }
         
     })
     }
@@ -195,7 +213,7 @@ function education(){
                 var edu_url = items.url;
 
                 $('.education-section').append(`
-                    <div class = "card">
+                    <div class = "card" data-aos="fade-down">
                         <div class="card-header">
                             <p class = "news-title"> <b> ${edu_title}  </b> </p>
                         </div>
@@ -231,8 +249,14 @@ function education(){
             })
         },
         error:function(){
-            alert('error loading education news via api');
-        }
+            $('.education-section').append(`
+            <div class="alert alert-danger" data-aos = "fade-down">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+   <strong>Error!</strong> Failed to get Education news feed for user
+ </div>
+ 
+            `)
+                     }
         
     })
     }
@@ -245,6 +269,6 @@ $(document).ready(function(){
     SciNews()  
     education()
     
-               
+    AOS.init();           
 });
 
